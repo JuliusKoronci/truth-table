@@ -1,0 +1,43 @@
+{
+  "name": "ts-lib-starter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "tsc -w",
+    "lint": "tslint --fix --project tsconfig.json",
+    "test": "jest",
+    "coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "build": "yarn lint && yarn test -- --coverage && yarn coverage && tsc -d"
+  },
+  "keywords": [],
+  "author": "Julius Koronci <jk@web-solutions.sk>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/enzyme": "^2.8.11",
+    "@types/istanbul": "^0.4.29",
+    "@types/jest": "^21.1.2",
+    "enzyme": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.1.0",
+    "tslint": "^5.7.0",
+    "tslint-config-airbnb": "^5.3.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/../node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "rootDir": "src",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
