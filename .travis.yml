@@ -6,7 +6,8 @@ node_js:
 matrix:
   fast_finish: true
 script:
-    - cd typescript-library-starter && npm install && npm run build
+    - ls
+    - npm install && npm run build
 notifications:
     email:
         on_success: never
