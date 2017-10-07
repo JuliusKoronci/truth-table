@@ -1,15 +1,12 @@
-language: javascript
+language: node_js
 sudo: false
 dist: trusty
 node_js:
-  - "stable"
+  - "8"
 matrix:
   fast_finish: true
-before_install:
-    - npm install yarn -g
-# do not send success notifications, they have no value
 script:
-    - yarn build
+    - cd typescript-library-starter && npm install && npm run build
 notifications:
     email:
         on_success: never
