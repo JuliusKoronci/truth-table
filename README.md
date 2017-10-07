@@ -94,6 +94,11 @@ We received the first match's last leaf. This may be what we want if the order m
 ``` 
 truthTable.getAllMatches([false, true]); // [value 3, value 7]
 ```
+### Advanced tip
+
+The last item of an option can be a function as well. So for instance if we need to call different 
+functions for each match, the getLastLeafOfMatch will return the last item in a match and if it is 
+a function we can just call it :)
 
 ### Interface
 
