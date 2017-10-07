@@ -1,10 +1,5 @@
-export class Test implements TestInterface {
-  test: string;
+import TruthTable from './TruthTable';
 
-  constructor(test: string) {
-    this.test = test;
-  }
-}
+export { TruthTable };
 
-
-export default Test;
+export default TruthTable;
