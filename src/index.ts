@@ -1,10 +1,6 @@
-export class Test implements TestInterface {
-  test: string;
+import TruthTable from './TruthTable';
+import { asyncTruthTableFactory } from './truth-table-async-factory';
 
-  constructor(test: string) {
-    this.test = test;
-  }
-}
+export { TruthTable, asyncTruthTableFactory };
 
-
-export default Test;
+export default TruthTable;
