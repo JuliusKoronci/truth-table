@@ -1,5 +1,5 @@
 {
-  "name": "ts-lib-starter",
+  "name": "ts-truth-table",
   "version": "0.1.0",
   "description": "",
   "main": "build/index.js",
@@ -12,7 +12,11 @@
     "coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "build": "yarn lint -- --fix && yarn test -- --coverage && yarn coverage && tsc -d"
   },
-  "keywords": [],
+  "keywords": [
+    "truth table",
+    "descission tree",
+    "library"
+  ],
   "author": "Julius Koronci <jk@web-solutions.sk>",
   "license": "ISC",
   "devDependencies": {
