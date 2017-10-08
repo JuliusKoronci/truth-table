@@ -1,6 +1,6 @@
 {
   "name": "ts-truth-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "build/index.js",
   "scripts": {
@@ -18,7 +18,11 @@
     "library"
   ],
   "author": "Julius Koronci <jk@web-solutions.sk>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuliusKoronci/truth-table"
+  },
   "devDependencies": {
     "@types/enzyme": "^2.8.11",
     "@types/istanbul": "^0.4.29",
