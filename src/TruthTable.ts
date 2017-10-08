@@ -1,8 +1,10 @@
 import { isValidArray } from './utils/validations';
 import { toString } from './utils/string';
+import { createHashTable, getOrUndefined, getStartWithOrUndefined } from './utils/common';
 
 class TruthTable implements TruthTableInterface {
   config: ConfigType;
+  hashTables: HashTablesType;
 
   /**
    * We need to pass in our array which represents the truth table we want to search in
@@ -13,7 +15,9 @@ class TruthTable implements TruthTableInterface {
     isValidArray(config);
 
     this.config = config;
+    this.hashTables = createHashTable(config);
   }
+
 
   /**
    * Search for an exact match in the truth table
@@ -23,8 +27,8 @@ class TruthTable implements TruthTableInterface {
    */
   getExactMatch = (configItem: any[]) => {
     isValidArray(configItem);
-    const compare = toString(configItem);
-    return this.config.find((item => toString(item) === compare));
+
+    return getOrUndefined(this.hashTables.exact, configItem);
   }
 
   /**
@@ -55,19 +59,11 @@ class TruthTable implements TruthTableInterface {
    */
   getLastLeafOfMatch = (configItem: any[]): any => {
     isValidArray(configItem);
-    const compare = toString(configItem);
-    const length = configItem.length;
-
-    const item = this.config.find(((item) => {
-      const itemToString = toString(item.slice(0, length));
-
-      return itemToString === compare;
-    }));
-    if (Array.isArray(item)) {
-      return item.slice(-1)[0];
+    let match = getOrUndefined(this.hashTables.leaf, configItem);
+    if (match === undefined) {
+      match = getStartWithOrUndefined(this.config, configItem);
     }
-
-    return item;
+    return match;
   }
 
   /**

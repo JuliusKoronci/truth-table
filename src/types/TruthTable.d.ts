@@ -2,8 +2,9 @@ type ConfigType = any[][];
 
 interface TruthTableInterface {
   config: ConfigType;
+  hashTables: HashTablesType;
 
-  getExactMatch(match: any[]): any[] | undefined;
+  getExactMatch(match: any[]): {} | undefined;
 
   getMatch(match: any[]): any[] | undefined;
 

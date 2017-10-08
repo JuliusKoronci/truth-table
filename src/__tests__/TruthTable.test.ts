@@ -1,12 +1,5 @@
+import { exampleTruthTable } from '../test-data/hashTable.data';
 import TruthTable from '../TruthTable';
-
-const exampleTruthTable = [
-  [true, false, 'value1'],
-  [true, true, 'value2'],
-  [false, true, 'value3'],
-  [false, false, 'value4'],
-  [false, true, 'value5'],
-];
 
 const tTable = new TruthTable(exampleTruthTable);
 
@@ -46,6 +39,9 @@ describe('TruthTable', () => {
   describe('getLastLeafOfMatch', () => {
     it('should return first match', () => {
       expect(tTable.getLastLeafOfMatch([false, true])).toEqual('value3');
+    });
+    it('should return first match', () => {
+      expect(tTable.getLastLeafOfMatch([false])).toEqual('value3');
     });
     it('should return undefined if no match', () => {
       expect(tTable.getLastLeafOfMatch([true, 'value9'])).toEqual(undefined);
