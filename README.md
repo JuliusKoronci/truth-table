@@ -24,6 +24,10 @@ I decided to write a small utility to help with this task.
 We can call it a Truth table a decision tree, it doesn't really match the mathematical definition 
 but matches google search queries :)
 
+``` 
+yarn add ts-truth-table
+```
+
 ### Example
 
 Imagine we have 2 checkboxes, 1 dropdown and an input field on our website. The value of the input 
