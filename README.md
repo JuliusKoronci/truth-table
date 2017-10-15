@@ -1,5 +1,8 @@
 ## Truth Table
 
+[![Build Status](https://api.travis-ci.org/JuliusKoronci/truth-table.svg?branch=master)](https://api.travis-ci.org/JuliusKoronci/truth-table)
+[![Coverage Status](https://coveralls.io/repos/github/JuliusKoronci/truth-table/badge.svg?branch=master)](https://coveralls.io/github/JuliusKoronci/truth-table?branch=master)
+
 Many times, we need to make a decision, retrieve a value, call a function based on a combination 
 of values/options/arguments.
 

@@ -27,6 +27,7 @@
     "@types/enzyme": "^2.8.11",
     "@types/istanbul": "^0.4.29",
     "@types/jest": "^21.1.2",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.1.0",
     "istanbul": "^0.4.5",
     "jest": "^21.2.1",
