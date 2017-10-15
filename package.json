@@ -9,7 +9,7 @@
     "lint:watch": "watch 'npm run lint' src",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "coveralls": "coveralls",
+    "coveralls": "cat ./src/coverage/lcov.info | node node_modules/.bin/coveralls",
     "coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "build": "yarn lint -- --fix && yarn test -- --coverage && yarn coverage && tsc -d"
   },
